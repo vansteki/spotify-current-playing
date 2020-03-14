@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="UTF-8">
+<html>
+
+<body>
+  <div>Copy token bwllow to clipboard :) &#128071;</div>
+  <input id='tokenOrCode' size=100>
+  <div>
+    <button onClick="copy()">Copy</button>
+  </div>
+  <script>
+    let tokenOrCode = location.href.match(/access_token=([^&]+)|code=([^&]+)/)[0].split('=')[1]
+    
+    document.getElementById('tokenOrCode').value = tokenOrCode
+
+    function copy() {
+      let copyText = document.getElementById("tokenOrCode");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); //For mobile devices
+      document.execCommand("copy");
+      console.log("Copied the text: " + copyText.value);
+    }
+  </script>
+</body>
+
+</html>
