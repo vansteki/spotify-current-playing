@@ -57,13 +57,14 @@ https://accounts.spotify.com/authorize?client_id=276321612ge12e1a&response_type=
 Paste your code here:
 ```
 
-paste link in 2. to browser, you should see something like:
+Paste link in 2. to browser (if you are first time to this, you will be asked to login into Spotify to authorize this app to access your Spotify account), you should see something like:
 ```
 {
   "msg":"Using this code to exchange access token 👇",
   "code":"AQCcIu9x....VKe"
 }
 ```
+
 
 Copy the code and paste it to prompt.
 If success, you should see something like these:
