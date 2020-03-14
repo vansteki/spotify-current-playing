@@ -30,8 +30,12 @@ ACCESS_TOKEN=""
 REFRESH_TOKEN=""
 CLIENT_ID=""       // you can get this from Spotify dashboard
 CLIENT_SECRET=""   // you can get this from Spotify dashboard
-REDIRECT_URI=""    // you can just use http://localhost:8000, should to be same as REDIRECT URI in Spotify dashboard 
+REDIRECT_URI=""    // you can just use http://localhost:8000, should to be same as Redirect URIs in Spotify dashboard 
 ```
+
+Redirect URIs in Spotify dashboard:
+
+<img src="https://i.imgur.com/ZOdqGUb.png" width="300">
 
 5. Launch local redirect server
 
@@ -88,4 +92,4 @@ You should get what you are playing now :)
 [200] title
 ```
 
-By default, it will check every 10 seconds.
+By default, it will check every 10 seconds. 😏
