@@ -86,10 +86,14 @@ Finally, just run
 
 `./app.zsh`
 
-You should get what you are playing now :)
+You should get what you are playing now 😏
 
 ```
 [200] title
 ```
+It will request to API every 10 seconds.
 
-By default, it will check every 10 seconds. 😏
+By default, the access token will expire after 1 hour, this app will refresh token automatically.
+
+
+
