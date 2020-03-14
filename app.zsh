@@ -9,15 +9,9 @@ CURRENT_PLAY=""
 
 function check_token() {
   TEST_API="https://api.spotify.com/v1/me/player/currently-playing"
-
-  #TEST_RESULT=`curl -s "$TEST_API" \
-  #  -H "Authorization: Bearer $ACCESS_TOKEN"`
   
   TEST_API_STATUS_CODE=`curl -Is -X HEAD "$TEST_API" -o /dev/null -w "%{http_code}" \
     -H "Authorization: Bearer $ACCESS_TOKEN"`
-
-  # echo "\n Try API: $TEST_API \n"
-  # echo "\n Status Code: $TEST_API_STATUS_CODE \n"
 }
 
 function refresh_token() {

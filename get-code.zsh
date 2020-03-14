@@ -1,5 +1,5 @@
 #!/bin/zsh
-set - x
+#set - x
 
 [ -f .env ] && source .env
 
@@ -7,16 +7,15 @@ function get_code() {
   echo 1.Remember to launch callback server by \"node callback-server.js\"
   echo 2.Paste link below to your browser, and getting your code 👇:
   echo "https://accounts.spotify.com/authorize?client_id=$CLIENT_ID&response_type=code&redirect_uri=$REDIRECT_URI&scope=$SCOPE"
+  echo -n "Paste your code here:"
+  read CODE
 
- echo -n "Paste your code here:"
- read CODE
-
- if [ ! -z $CODE ]
- then
-   CODE=$(echo $CODE | tr -d '"')
-   echo -n "Save code to .env"
-   sed -i "_backup"  "s/CODE=\"\"/CODE=\"$CODE\"/g" .env
- fi
+  if [ ! -z $CODE ]
+  then
+    CODE=$(echo $CODE | tr -d '"')
+    echo -n "Save code to .env"
+    sed -i "_backup"  "s/CODE=\"\"/CODE=\"$CODE\"/g" .env
+  fi
 }
 
 function use_code_to_get_tokens() {
