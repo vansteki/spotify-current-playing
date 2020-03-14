@@ -3,6 +3,8 @@ Use Spotify API to get current playing song
 
 ## Usage 
 
+You may want to check [Authorization Guide](https://developer.spotify.com/documentation/general/guides/authorization-guide/)
+
 ### Install
 
 1. install dependencies
